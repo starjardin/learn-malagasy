@@ -17,7 +17,7 @@ export default function ListItem({item, name, onRowPress, disabled}) {
   const {phraseToLearn} = state;
 
   function handlePress() {
-    if (onRowPress) {
+    if (onRowPress) { // Why would onRowPress be undefined? Every list item in the app is clickable
       onRowPress();
     }
   }

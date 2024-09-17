@@ -25,12 +25,12 @@ export default function Button({
   onPressButton,
   buttonText,
   textColor,
-  children,
+  children, // children could be more precise (e.g. icon)
   style,
   rowRef,
   ...restProps
 }) {
-  let touchProps = {
+  const touchProps = {
     style: [styles.actionButtonStyles, {...style}],
     activeOpacity: 0.5,
     onPress: onPressButton,

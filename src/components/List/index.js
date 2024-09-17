@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import {SafeAreaView, FlatList} from 'react-native';
 import {LanguageContext} from '../../context/globalContext';
 import ListItem from '../ListItem';
+import 'react-native-get-random-values';
 import {v4 as uuidv4} from 'uuid';
 
 export default function List({
@@ -14,7 +15,7 @@ export default function List({
   const {dispatch} = useContext(LanguageContext);
 
   function handlePress(item) {
-    navigation && navigation.navigate(`${navigateTo}`, {item});
+    navigation && navigation.navigate(`${navigateTo}`, {item}); // Is the template string necessary?
     if (onRowPress) {
       onRowPress();
       dispatch({

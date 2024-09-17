@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     paddingTop: 11,
     paddingBottom: 11,
     paddingRight: 31,
-    paddingLeft: 27,
+    paddingLeft: 27, // Item is not centered
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Button({onPress, buttonText, disabled, ...restProps}) {
+export default function Button({onPress, buttonText, disabled, ...restProps}) { // rest props is not necessary
   return (
     <TouchableHighlight
       style={[styles.nextButtonStyles, disabled && styles.disabledButtonStyles]}
@@ -59,7 +59,7 @@ Button.defaultProps = {
   onPress: () => {},
 };
 
-Button.propTypes = {
+Button.propTypes = { // nice
   buttonText: PropTypes.string.isRequired,
   onPress: PropTypes.func,
   disabled: PropTypes.bool,

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Button({onPress, children, ...restProps}) {
+export default function Button({onPress, children, ...restProps}) { // The primary and secondary language should be props
   return (
     <TouchableOpacity style={styles.buttonStyles} activeOpacity={0.5}>
       <Text style={[styles.textStyle, {paddingRight: 10}]}>Eng</Text>

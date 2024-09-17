@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 });
 
 // I choose to render the text and the color from the props, just in case of change in the future
-
+// This is the wrong element, the overall app header instead of the section header.
 export default function SectionHeader({headerText, textColor}) {
   return (
     <SafeAreaView>

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 });
 
 // I choose to render the text and the color from the props, just in case of change in the future
-
+// This is not the SectionHeading but the listItem
 export default function ListItemHeading({actionText, buttonText}) {
   return (
     <SafeAreaView style={styles.containerStyles}>

@@ -14,10 +14,11 @@ export default ({route, navigation}) => {
   let {phrasesIds} = item;
   const {phrases} = state;
 
-  let haveNumber = [];
+  let haveNumber = []; // name could be better
+  // recursive is good thought, combining it with a while-loop will improve readability
   function generateUniqueRandom(maxNumber) {
     //!Generate random number
-    let random = (Math.random() * maxNumber).toFixed();
+    let random = (Math.random() * maxNumber).toFixed(0);
     random = Number(random);
     if (!haveNumber.includes(random)) {
       haveNumber.push(random);
@@ -32,7 +33,7 @@ export default ({route, navigation}) => {
     }
   }
 
-  const uniqueNumber = generateUniqueRandom(phrasesIds.length - 1);
+  const uniqueNumber = generateUniqueRandom(phrasesIds.length - 1); // Why do all the recursiveness if you only want a single number? 
 
   //!find a phrase from phrases that has the same id to the phraseId in line above
   const phraseToLearn = phrases.find(el => el.id === phrasesIds[uniqueNumber]);
@@ -47,7 +48,7 @@ export default ({route, navigation}) => {
   const item4 = phrases[randomNumb4];
   const itemsToChooseFrom = [item1, item2, item3, item4];
 
-  //!Suffle the items
+  //!Shuffle the items
   const shuffledAnswers = shuffle(itemsToChooseFrom);
 
   return (

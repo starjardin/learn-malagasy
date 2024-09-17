@@ -25,7 +25,7 @@ export default ({route, navigation}) => {
       disabled={true}
     />
   );
-
+  // The switching between the screens is slow, is there another way?
   return (
     <View style={containerStyles.container}>
       <Navbar page="HomeScreenValidation" navigation={navigation} />
@@ -39,7 +39,7 @@ export default ({route, navigation}) => {
           onPress={() => {
             navigation.navigate('LearningScreen');
             setItemSelected('');
-            //TODO: //May be I could delete an item here// or put it in the seen phrases
+            //TODO: //May be I could delete an item here// or put it in the seen phrases dont leave todos in main branch
             dispatch({
               type: 'SEEN_ITEM',
               payload: phrase,

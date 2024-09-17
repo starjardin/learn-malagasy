@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
 export const Outset = () => {
   return <View style={styles.outset} />;
 };
-
+// I like it
 export default function Navbar({navigation, page}) {
   const {setItemSelected} = useContext(ListContext);
   return (
